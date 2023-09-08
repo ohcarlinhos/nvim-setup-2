@@ -179,5 +179,7 @@ return require('packer').startup(function(use)
     
     -- terminal
     use('voldikss/vim-floaterm')
-
+    
+    -- status
+    use 'wakatime/vim-wakatime'
 end)
