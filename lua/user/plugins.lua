@@ -176,10 +176,13 @@ return require('packer').startup(function(use)
     if packer_bootstrap then
         require('packer').sync()
     end
-    
+
     -- terminal
     use('voldikss/vim-floaterm')
-    
+
     -- status
     use 'wakatime/vim-wakatime'
+
+    -- formating
+    use 'sbdchd/neoformat'
 end)
