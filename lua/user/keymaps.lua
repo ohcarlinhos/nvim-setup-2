@@ -89,3 +89,5 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
 -- Uses similar commands to open panel
 vim.keymap.set('n', '<leader>%', ':vs<CR>')
 vim.keymap.set('n', '<leader>-', ':sp<CR>')
+
+vim.keymap.set('n', '<leader>a', 'ggVG', { desc = 'Select all text' })
