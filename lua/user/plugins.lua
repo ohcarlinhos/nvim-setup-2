@@ -185,4 +185,7 @@ return require('packer').startup(function(use)
 
     -- formating
     use 'sbdchd/neoformat'
+
+    -- movimentação
+    use 'matze/vim-move'
 end)
