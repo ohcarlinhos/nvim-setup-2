@@ -188,4 +188,7 @@ return require('packer').startup(function(use)
 
     -- movimentação
     use 'matze/vim-move'
+
+    -- lsp
+    use 'onsails/lspkind-nvim'
 end)
