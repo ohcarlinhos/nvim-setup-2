@@ -11,6 +11,8 @@ end, { desc = "Telescope search + grep" })
 vim.keymap.set('n', '<leader>pg', builtin.live_grep, { desc = "Telescope live_grep" })
 vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = "Telescope help_tags" })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = "Telescope git_files" })
+vim.keymap.set('n', '<leader>pO', builtin.oldfiles, { desc= "Lists previously open files" })
+
 -- <leader>gs is used by fugitive
 vim.keymap.set('n', '<leader>gS', builtin.git_status, { desc = "Telescope git_status" })
 vim.keymap.set('n', '<leader>gB', builtin.git_stash, { desc = "Telescope git_stash" })
