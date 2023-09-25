@@ -1,11 +1,13 @@
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
         vim.cmd [[packadd packer.nvim]]
         return true
     end
+
     return false
 end
 
@@ -134,6 +136,8 @@ return require('packer').startup(function(use)
             },
             { 'williamboman/mason-lspconfig.nvim' },
 
+            { 'onsails/lspkind-nvim' },
+
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
@@ -142,7 +146,6 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-cmdline' },
             { 'hrsh7th/cmp-nvim-lua' },
 
-            -- Snippets
             {
                 "L3MON4D3/LuaSnip",
                 tag = "v2.*",
@@ -171,12 +174,6 @@ return require('packer').startup(function(use)
         end
     })
 
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then
-        require('packer').sync()
-    end
-
     -- terminal
     use('voldikss/vim-floaterm')
 
@@ -190,5 +187,11 @@ return require('packer').startup(function(use)
     use 'matze/vim-move'
 
     -- lsp
-    use 'onsails/lspkind-nvim'
+    -- use 'onsails/lspkind-nvim'
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
