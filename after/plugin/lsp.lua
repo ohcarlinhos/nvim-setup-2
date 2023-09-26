@@ -65,6 +65,7 @@ cmp.setup({
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
+    { name = "codeium" },
   },
 
   formatting = {
@@ -102,7 +103,7 @@ lsp.set_sign_icons({
 -- lspconfig
 
 local lspconfig = require('lspconfig')
-local lspconfig_configs = require('lspconfig.configs')
+-- local lspconfig_configs = require('lspconfig.configs')
 local lspconfig_util = require("lspconfig/util")
 
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
@@ -140,4 +141,4 @@ vim.diagnostic.config({
   virtual_text = true,
 })
 
-require("luasnip/loaders/from_vscode").load()
+-- require("luasnip/loaders/from_vscode").load()

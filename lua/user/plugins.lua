@@ -136,8 +136,6 @@ return require('packer').startup(function(use)
             },
             { 'williamboman/mason-lspconfig.nvim' },
 
-            { 'onsails/lspkind-nvim' },
-
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
@@ -187,7 +185,19 @@ return require('packer').startup(function(use)
     use 'matze/vim-move'
 
     -- lsp
-    -- use 'onsails/lspkind-nvim'
+    use 'onsails/lspkind-nvim'
+
+    use {
+        "Exafunction/codeium.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "hrsh7th/nvim-cmp",
+        },
+        config = function()
+            require("codeium").setup({
+            })
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
