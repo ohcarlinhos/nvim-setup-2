@@ -165,12 +165,10 @@ return require('packer').startup(function(use)
         end
     })
 
-    -- Theme
     use({
-        'catppuccin/nvim',
-        as = 'catppuccin',
+        'folke/tokyonight.nvim',
         config = function()
-            vim.cmd('colorscheme catppuccin')
+            vim.cmd("colorscheme tokyonight-storm")
         end
     })
 
