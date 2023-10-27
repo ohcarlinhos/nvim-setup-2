@@ -1,8 +1,4 @@
 -- ============= CONFIG FROM: theprimeagen
---vim.g.mapleader = ' '
---vim.g.maplocalleader = ' '
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "File explorer" })
-
 vim.keymap.set("n", "<leader>gl", "<cmd>diffget //2<CR>", { desc = "Get right side diff" })
 vim.keymap.set("n", "<leader>gh", "<cmd>diffget //3<CR>", { desc = "Get left side diff" })
 
@@ -41,13 +37,8 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- ============= MY CONFIGS
-
 -- Quick clear search highlight with Esc
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>')
-
--- Select all
--- vim.keymap.set('n', '<c-a>', 'ggVG')
 
 -- Close all buffers windows.
 vim.keymap.set('n', '<leader>Q', ':bufdo bdelete<CR>')
