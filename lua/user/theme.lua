@@ -217,5 +217,7 @@ ins_right {
     padding = { left = 1 },
 }
 
+require("ibl").setup()
+
 -- Now don't forget to initialize lualine
 lualine.setup(config)
